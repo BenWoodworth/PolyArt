@@ -1,4 +1,4 @@
-package net.benwoodworth.polyart.matrix
+package net.benwoodworth.math.matrix
 
 interface Matrix<TRows : MatrixSize, TColumns : MatrixSize> {
     val rows: Int

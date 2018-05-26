@@ -1,4 +1,4 @@
-package net.benwoodworth.polyart.geometry
+package net.benwoodworth.math.geometry
 
 interface Polygon : Shape {
 

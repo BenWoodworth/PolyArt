@@ -1,4 +1,4 @@
-package net.benwoodworth.polyart.matrix
+package net.benwoodworth.math.matrix
 
 sealed class MatrixSize(val size: Int) {
 

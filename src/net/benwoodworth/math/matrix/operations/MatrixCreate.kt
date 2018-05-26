@@ -1,7 +1,7 @@
-package net.benwoodworth.polyart.matrix.operations
+package net.benwoodworth.math.matrix.operations
 
-import net.benwoodworth.polyart.matrix.Matrix
-import net.benwoodworth.polyart.matrix.MatrixSize
+import net.benwoodworth.math.matrix.Matrix
+import net.benwoodworth.math.matrix.MatrixSize
 
 private class ArrayMatrix<TRows : MatrixSize, TColumns : MatrixSize>(
         rows: TRows,

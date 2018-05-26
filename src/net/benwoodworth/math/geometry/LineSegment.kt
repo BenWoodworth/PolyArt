@@ -1,4 +1,4 @@
-package net.benwoodworth.polyart.geometry
+package net.benwoodworth.math.geometry
 
 import kotlin.math.atan2
 import kotlin.math.cos

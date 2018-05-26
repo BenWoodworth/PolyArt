@@ -1,6 +1,4 @@
-package net.benwoodworth.polyart.geometry
-
-import kotlin.math.sqrt
+package net.benwoodworth.math.geometry
 
 interface Shape{
 
