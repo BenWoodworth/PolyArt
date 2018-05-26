@@ -2,13 +2,11 @@ package net.benwoodworth.polyart.matrix
 
 sealed class MatrixSize(val size: Int) {
 
-    override fun equals(other: Any?) = other is MatrixSize && other.size == size
+    override fun equals(other: Any?) = this === other
 
     override fun hashCode() = size
 
     override fun toString() = "MatrixSize($size)"
-
-    class Custom(size: Int) : MatrixSize(size)
 
     object M0 : MatrixSize(0)
     object M1 : MatrixSize(1)
