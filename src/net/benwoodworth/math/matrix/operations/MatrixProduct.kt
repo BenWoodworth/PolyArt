@@ -50,3 +50,10 @@ operator fun <TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize>
 ): Matrix<TRows, TColumns> {
     return MatrixProduct(this, matrix)
 }
+
+operator fun <TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize> Matrix<TRows, TMatching>.invoke(
+        matrix: Matrix<TMatching, TColumns>
+): Matrix<TRows, TColumns> {
+    return MatrixProduct(this, matrix)
+}
+

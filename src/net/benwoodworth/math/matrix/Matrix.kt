@@ -11,14 +11,14 @@ interface Matrix<TRows : MatrixSize, TColumns : MatrixSize> {
 //    val transpose: Matrix<TColumns, TRows>
 //
 //    fun <TArgColumns : MatrixSize> crossProduct(
-//            matrix: Matrix<TColumns, TArgColumns>
+//            backingMatrix: Matrix<TColumns, TArgColumns>
 //    ): Matrix<TRows, TArgColumns>
 //
 //    infix fun <TArgColumns : MatrixSize> x(
-//            matrix: Matrix<TColumns, TArgColumns>
+//            backingMatrix: Matrix<TColumns, TArgColumns>
 //    ): Matrix<TRows, TArgColumns>
 //
-//    operator fun plus(matrix: Matrix<TRows, TColumns>): Matrix<TRows, TColumns>
+//    operator fun plus(backingMatrix: Matrix<TRows, TColumns>): Matrix<TRows, TColumns>
 //
 //    operator fun times(multiplier: Double): Matrix<TRows, TColumns>
 //
