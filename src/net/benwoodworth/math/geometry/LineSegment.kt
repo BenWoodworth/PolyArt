@@ -19,7 +19,7 @@ data class LineSegment(
         if (point == point0) return true
         if (point == point1) return true
 
-
+        TODO()
     }
 
     override fun distance(point: Point): Double {
@@ -35,9 +35,8 @@ data class LineSegment(
         val translatedY = point.y - point0.y
 
 
-
         // Rotate point1 to y=0
-        val rotatedX = translatedX * cos(-angle) + translatedY *
+        //val rotatedX = translatedX * cos(-angle) + translatedY *
+        TODO()
     }
-}
 }

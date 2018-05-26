@@ -12,10 +12,10 @@ data class Square(
     }
 
     override val vertices = listOf(
-            location,
-            location.offset(dy = size),
-            location.offset(dx = size, dy = size),
-            location.offset(dx = size)
+            location//,
+//            location.offset(dy = size),
+//            location.offset(dx = size, dy = size),
+//            location.offset(dx = size)
     )
 
     override fun contains(point: Point): Boolean {

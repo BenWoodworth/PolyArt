@@ -8,13 +8,6 @@ data class Point(
         val y: Double
 ) : Shape {
 
-    fun offset(dx: Double = 0.0, dy: Double = 0.0): Point {
-        return when {
-            (dx == 0.0) && (dy == 0.0) -> this
-            else -> Point(x + dx, y + dy)
-        }
-    }
-
     override fun contains(point: Point) = this == point
 
     override fun distance(point: Point): Double {

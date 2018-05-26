@@ -1,11 +1,10 @@
 package net.benwoodworth.math.matrix.operations
 
 import net.benwoodworth.math.matrix.Matrix
-import net.benwoodworth.math.matrix.MatrixBase
+import net.benwoodworth.math.matrix.implementations.MatrixBase
 import net.benwoodworth.math.matrix.MatrixSize
 
-@Suppress("UNCHECKED_CAST")
-private class MatrixProduct<TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize>(
+internal class MatrixProduct<TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize>(
         private val matrixA: Matrix<TRows, TMatching>,
         private val matrixB: Matrix<TMatching, TColumns>
 ) : MatrixBase<TRows, TColumns>() {
@@ -44,17 +43,5 @@ private class MatrixProduct<TRows : MatrixSize, TMatching : MatrixSize, TColumns
 
         return result
     }
-}
-
-operator fun <TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize> Matrix<TRows, TMatching>.times(
-        matrix: Matrix<TMatching, TColumns>
-): Matrix<TRows, TColumns> {
-    return MatrixProduct(this, matrix)
-}
-
-operator fun <TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize> Matrix<TRows, TMatching>.invoke(
-        matrix: Matrix<TMatching, TColumns>
-): Matrix<TRows, TColumns> {
-    return MatrixProduct(this, matrix)
 }
 
