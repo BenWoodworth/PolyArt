@@ -1,4 +1,7 @@
-package net.benwoodworth.polyart.matrices
+package net.benwoodworth.polyart.matrix.operations
+
+import net.benwoodworth.polyart.matrix.Matrix
+import net.benwoodworth.polyart.matrix.MatrixSize
 
 @Suppress("UNCHECKED_CAST")
 private class MatrixProduct<TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize>(
