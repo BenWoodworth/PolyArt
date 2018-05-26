@@ -1,13 +1,14 @@
 package net.benwoodworth.math.matrix.operations
 
 import net.benwoodworth.math.matrix.Matrix
+import net.benwoodworth.math.matrix.MatrixBase
 import net.benwoodworth.math.matrix.MatrixSize
 
 private class ArrayMatrix<TRows : MatrixSize, TColumns : MatrixSize>(
         rows: TRows,
         columns: TColumns,
         private vararg val values: Double
-) : Matrix<TRows, TColumns> {
+) : MatrixBase<TRows, TColumns>() {
 
     override val rows = rows.size
     override val columns = columns.size

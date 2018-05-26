@@ -1,11 +1,12 @@
 package net.benwoodworth.math.matrix.operations
 
 import net.benwoodworth.math.matrix.Matrix
+import net.benwoodworth.math.matrix.MatrixBase
 import net.benwoodworth.math.matrix.MatrixSize
 
 private class MatrixTransposed<TRows : MatrixSize, TColumns : MatrixSize>(
         val backingMatrix: Matrix<TColumns, TRows>
-) : Matrix<TRows, TColumns> {
+) : MatrixBase<TRows, TColumns>() {
 
     override val rows = backingMatrix.rows
     override val columns = backingMatrix.columns

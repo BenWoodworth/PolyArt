@@ -1,13 +1,14 @@
 package net.benwoodworth.math.matrix.operations
 
 import net.benwoodworth.math.matrix.Matrix
+import net.benwoodworth.math.matrix.MatrixBase
 import net.benwoodworth.math.matrix.MatrixSize
 
 @Suppress("UNCHECKED_CAST")
 private class MatrixProduct<TRows : MatrixSize, TMatching : MatrixSize, TColumns : MatrixSize>(
         private val matrixA: Matrix<TRows, TMatching>,
         private val matrixB: Matrix<TMatching, TColumns>
-) : Matrix<TRows, TColumns> {
+) : MatrixBase<TRows, TColumns>() {
 
     init {
         require(matrixA.columns == matrixB.rows) {

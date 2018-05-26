@@ -1,12 +1,13 @@
 package net.benwoodworth.math.matrix.operations
 
 import net.benwoodworth.math.matrix.Matrix
+import net.benwoodworth.math.matrix.MatrixBase
 import net.benwoodworth.math.matrix.MatrixSize
 
 private class MatrixSum<TRows : MatrixSize, TColumns : MatrixSize>(
         private val matrixA: Matrix<TRows, TColumns>,
         private val matrixB: Matrix<TRows, TColumns>
-) : Matrix<TRows, TColumns> {
+) : MatrixBase<TRows, TColumns>() {
 
     init {
         require(matrixA.rows == matrixB.rows && matrixA.columns == matrixB.columns) {
