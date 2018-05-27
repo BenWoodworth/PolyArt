@@ -1,6 +1,5 @@
 package net.benwoodworth.polyart
 
-import net.benwoodworth.math.matrix.MatrixSize.*
 import net.benwoodworth.math.matrix.matrix
 
 fun main(args: Array<String>) {

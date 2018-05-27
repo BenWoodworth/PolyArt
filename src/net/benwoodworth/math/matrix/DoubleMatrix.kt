@@ -125,7 +125,7 @@ class DoubleMatrix<TRows : MatrixSize, TColumns : MatrixSize> private constructo
             for (column in 0 until columns) {
                 if (column > 0) builder.append(", ")
 
-                builder.append(this@DoubleMatrix[row, column])
+                builder.append(this[row, column])
             }
             builder.append('}')
         }

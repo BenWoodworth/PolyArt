@@ -8,58 +8,46 @@ sealed class MatrixSize(val size: Int) {
 
     override fun toString() = "MatrixSize($size)"
 
-    object M0 : MatrixSize(0)
-    object M1 : MatrixSize(1)
-    object M2 : MatrixSize(2)
-    object M3 : MatrixSize(3)
-    object M4 : MatrixSize(4)
-    object M5 : MatrixSize(5)
-    object M6 : MatrixSize(6)
-    object M7 : MatrixSize(7)
-    object M8 : MatrixSize(8)
-    object M9 : MatrixSize(9)
+    object M0 : MatrixSize(0), GtEq.M0, LtEq.M0
+    object M1 : MatrixSize(1), GtEq.M1, LtEq.M1
+    object M2 : MatrixSize(2), GtEq.M2, LtEq.M2
+    object M3 : MatrixSize(3), GtEq.M3, LtEq.M3
+    object M4 : MatrixSize(4), GtEq.M4, LtEq.M4
+    object M5 : MatrixSize(5), GtEq.M5, LtEq.M5
+    object M6 : MatrixSize(6), GtEq.M6, LtEq.M6
+    object M7 : MatrixSize(7), GtEq.M7, LtEq.M7
+    object M8 : MatrixSize(8), GtEq.M8, LtEq.M8
+    object M9 : MatrixSize(9), GtEq.M9, LtEq.M9
 
-    object M10 : MatrixSize(10)
-    object M11 : MatrixSize(11)
-    object M12 : MatrixSize(12)
-    object M13 : MatrixSize(13)
-    object M14 : MatrixSize(14)
-    object M15 : MatrixSize(15)
-    object M16 : MatrixSize(16)
-    object M17 : MatrixSize(17)
-    object M18 : MatrixSize(18)
-    object M19 : MatrixSize(19)
+    /**
+     * Greater than or equal to.
+     */
+    sealed class GtEq {
+        interface M0
+        interface M1 : M0
+        interface M2 : M1
+        interface M3 : M2
+        interface M4 : M3
+        interface M5 : M4
+        interface M6 : M5
+        interface M7 : M6
+        interface M8 : M7
+        interface M9 : M8
+    }
 
-    object M20 : MatrixSize(20)
-    object M21 : MatrixSize(21)
-    object M22 : MatrixSize(22)
-    object M23 : MatrixSize(23)
-    object M24 : MatrixSize(24)
-    object M25 : MatrixSize(25)
-    object M26 : MatrixSize(26)
-    object M27 : MatrixSize(27)
-    object M28 : MatrixSize(28)
-    object M29 : MatrixSize(29)
-
-    object M30 : MatrixSize(30)
-    object M31 : MatrixSize(31)
-    object M32 : MatrixSize(32)
-    object M33 : MatrixSize(33)
-    object M34 : MatrixSize(34)
-    object M35 : MatrixSize(35)
-    object M36 : MatrixSize(36)
-    object M37 : MatrixSize(37)
-    object M38 : MatrixSize(38)
-    object M39 : MatrixSize(39)
-
-    object M40 : MatrixSize(40)
-    object M41 : MatrixSize(41)
-    object M42 : MatrixSize(42)
-    object M43 : MatrixSize(43)
-    object M44 : MatrixSize(44)
-    object M45 : MatrixSize(45)
-    object M46 : MatrixSize(46)
-    object M47 : MatrixSize(47)
-    object M48 : MatrixSize(48)
-    object M49 : MatrixSize(49)
+    /**
+     * Less than or equal to.
+     */
+    sealed class LtEq {
+        interface M0 : M1
+        interface M1 : M2
+        interface M2 : M3
+        interface M3 : M4
+        interface M4 : M5
+        interface M5 : M6
+        interface M6 : M7
+        interface M7 : M8
+        interface M8 : M9
+        interface M9 /*: M10*/
+    }
 }
